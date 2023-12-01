@@ -2,6 +2,7 @@ from replit import clear
 
 from art import logo
 
+import math
 
 #Calculator
 
@@ -34,6 +35,10 @@ def power(n1,n2):
 def modulus(n1, n2):
   return n1 % n2
 
+#Logarithm
+def logarithm(n1, n2):
+  return float(math.log(n1) / math.log(n2))
+
 
 #Create dictionary with all functions
 operations = {
@@ -42,8 +47,10 @@ operations = {
   "*": multiply,
   "/": divide,
   "**": power,
-  "%": modulus
+  "%": modulus,
+  "log": logarithm
 }
+
 
 def calculator():
   print(logo)
@@ -54,7 +61,7 @@ def calculator():
   
   while should_continue:
     operation_symbol = input("Pick an operation: ")
-    num2 = float(input("What's the next number?: "))
+    num2 = float(input("What's the next number (base if log is chosen)?: "))
     chosen_op = operations[operation_symbol]
     answer = chosen_op(num1, num2)
   
