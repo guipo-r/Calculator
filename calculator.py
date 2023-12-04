@@ -1,6 +1,7 @@
 from replit import clear
 
 from art import logo
+import math
 
 
 #Calculator
@@ -34,6 +35,11 @@ def power(n1,n2):
 def modulus(n1, n2):
   return n1 % n2
 
+#Squareroot
+
+def squareroot(n1):
+  return math.sqrt(n1)
+
 
 #Create dictionary with all functions
 operations = {
@@ -43,6 +49,7 @@ operations = {
   "/": divide,
   "**": power,
   "%": modulus
+  "√": squareroot
 }
 
 def calculator():
