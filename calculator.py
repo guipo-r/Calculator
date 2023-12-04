@@ -48,7 +48,7 @@ operations = {
   "*": multiply,
   "/": divide,
   "**": power,
-  "%": modulus
+  "%": modulus,
   "√": squareroot
 }
 
